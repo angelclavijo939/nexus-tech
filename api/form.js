@@ -1,4 +1,3 @@
-
 /**
  * NEXUS TECH — API Route Vercel (Node.js)
  * Endpoint: /api/form
@@ -97,8 +96,9 @@ module.exports = async function handler(req, res) {
     if (err.code === '23505') {
       return json(res, 409, { success: false, message: 'Este teléfono ya está registrado.' });
     }
-    return json(res, 500, { success: false, message: 'Error al guardar el registro. Intenta de nuevo.' });
+    return json(res, 500, { success: false, message: 'Error al guardar el registro.', detail: err.message, code: err.code });
   } finally {
     if (client) client.release();
   }
 };
+
