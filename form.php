@@ -110,7 +110,7 @@ try {
 // ——— Insertar registro ———
 try {
     $insert = $pdo->prepare('
-    INSERT INTO clientes_web (nombres, apellidos, correo, telefono, mensaje)
+    INSERT INTO public.clientes_web (nombres, apellidos, correo, telefono, mensaje)
     VALUES (:nombres, :apellidos, :correo, :telefono, :mensaje)
 ');
     $insert->execute([
