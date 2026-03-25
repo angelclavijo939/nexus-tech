@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS TECH — Proyectos, Marketing Digital & IA</title>
+  <meta name="description" content="Empresa de tecnología especializada en desarrollo de software, marketing digital, servicios de IA y más. Transformamos ideas en soluciones digitales de vanguardia." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300e5ff'/><text y='24' x='6' font-size='22' font-weight='900' fill='%23050a14' font-family='monospace'>N</text></svg>" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-ring"></div>
+  <p class="loader-text">INICIANDO SISTEMA</p>
+</div>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ============================================================ HEADER -->
+<header id="header">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">N</div>
+    <span class="logo-text">NEXUS</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav-menu">
+    <a href="#hero">Inicio</a>
+    <a href="#services">Servicios</a>
+    <a href="#about">Quién soy</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+</header>
+
+<!-- ============================================================ HERO -->
+<section id="hero">
+  <!-- Video background -->
+  <div class="hero-video-wrap">
+    <iframe
+      src="https://player.vimeo.com/video/503163798?autoplay=1&muted=1&loop=1&background=1"
+      frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;"
+    ></iframe>
+  </div>
+
+  <!-- Fallback image bg -->
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+
+  <!-- Atom decoration -->
+  <div class="atom-wrap">
+    <div class="atom-core"></div>
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+    <div class="orbit orbit-3"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">⚡ Innovación · Tecnología · Resultados</div>
+    <h1 class="hero-title">
+      Transformamos Ideas en<br>
+      <span class="highlight">Soluciones Digitales</span><br>
+      de Vanguardia
+    </h1>
+    <p class="hero-desc">
+      Desarrollo de software, marketing digital e inteligencia artificial. 
+      Llevamos tu negocio al siguiente nivel con tecnología de punta.
+    </p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn-primary">
+        Explorar Servicios
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-outline">
+        Hablar con un experto
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================ SERVICES -->
+<section id="services">
+  <div class="center reveal">
+    <span class="section-label">Lo que hacemos</span>
+    <h2 class="section-title">Nuestros <span style="background:linear-gradient(90deg,var(--cyan),var(--purple-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Servicios</span></h2>
+    <p class="section-sub">Soluciones integrales para escalar tu negocio en el mundo digital.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <a href="diseno-web.html" class="service-btn reveal reveal-delay-1">
+      <div class="service-icon">🎨</div>
+      <span class="service-btn-title">Diseño Web</span>
+      <span class="service-btn-desc">UI/UX profesional y sitios web que convierten visitantes en clientes.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+    <a href="desarrollo-software.html" class="service-btn reveal reveal-delay-2">
+      <div class="service-icon">💻</div>
+      <span class="service-btn-title">Desarrollo de Software</span>
+      <span class="service-btn-desc">Soluciones a medida con Python, JS, PHP, PL/SQL e Informix.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+    <a href="escritura-traduccion.html" class="service-btn reveal reveal-delay-3">
+      <div class="service-icon">✍️</div>
+      <span class="service-btn-title">Escritura y Traducción</span>
+      <span class="service-btn-desc">Transcripción de audio/video y traducción profesional.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+    <a href="marketing-digital.html" class="service-btn reveal reveal-delay-1">
+      <div class="service-icon">📈</div>
+      <span class="service-btn-title">Marketing Digital</span>
+      <span class="service-btn-desc">SEO, redes sociales y campañas en motores de búsqueda.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+    <a href="servicios-ia.html" class="service-btn reveal reveal-delay-2">
+      <div class="service-icon">🤖</div>
+      <span class="service-btn-title">Servicios de IA</span>
+      <span class="service-btn-desc">Chatbots, modelos y aplicaciones de inteligencia artificial.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+    <a href="negocios.html" class="service-btn reveal reveal-delay-3">
+      <div class="service-icon">💼</div>
+      <span class="service-btn-title">Negocios</span>
+      <span class="service-btn-desc">Consultoría de IA, gestión de proyectos y Business Intelligence.</span>
+      <span class="service-arrow">→</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=700" alt="Experto en tecnología" loading="lazy" />
+      <div class="about-img-frame"></div>
+      <div class="about-img-badge">
+        <strong><span class="count-up" data-target="8" data-suffix="+">0+</span></strong>
+        <span>Años de experiencia</span>
+      </div>
+    </div>
+    <div class="about-text reveal reveal-delay-2">
+      <span class="section-label">Quién soy</span>
+      <h2>Tecnología + Creatividad = <span style="color:var(--cyan)">Resultados Reales</span></h2>
+      <p>Soy un profesional apasionado por la tecnología con más de 8 años transformando negocios a través del desarrollo de software, la inteligencia artificial y el marketing digital.</p>
+      <p>Mi enfoque es simple: entender tu negocio a fondo y construir soluciones que no solo sean tecnológicamente avanzadas, sino que generen un impacto real y medible en tus resultados.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-num count-up" data-target="120" data-suffix="+">0+</div>
+          <div class="stat-lbl">Proyectos completados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num count-up" data-target="85" data-suffix="+">0+</div>
+          <div class="stat-lbl">Clientes satisfechos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num count-up" data-target="99" data-suffix="%">0%</div>
+          <div class="stat-lbl">Tasa de éxito</div>
+        </div>
+      </div>
+      <a href="#contact" class="btn-primary">Trabajemos Juntos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TESTIMONIALS -->
+<section id="testimonials">
+  <div class="center reveal">
+    <span class="section-label">Opiniones</span>
+    <h2 class="section-title">Lo que dicen nuestros <span style="color:var(--cyan)">Clientes</span></h2>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">El equipo de Nexus superó todas nuestras expectativas. Desarrollaron nuestra plataforma de e-commerce en tiempo récord y con una calidad impresionante. Las ventas aumentaron un 40% en el primer mes.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Carlos Mejía" loading="lazy" />
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="author-name">Carlos Mejía</div>
+          <div class="author-role">CEO · TechStore Colombia</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">Gracias a la estrategia de marketing digital implementada, logramos posicionarnos en el top 3 de Google en menos de 4 meses. El ROI fue increíble. Definitivamente los recomiendo.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1494790108755-2616b332c08f?w=100" alt="María González" loading="lazy" />
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="author-name">María González</div>
+          <div class="author-role">Directora de Marketing · Innova SAS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-3">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">El chatbot de IA que desarrollaron para nuestro servicio al cliente redujo los tiempos de respuesta en un 70%. Nuestros clientes están felices y el equipo de soporte puede enfocarse en casos complejos.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Andrés Torres" loading="lazy" />
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="author-name">Andrés Torres</div>
+          <div class="author-role">CTO · FinTech Solutions</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ BLOG -->
+<section id="blog">
+  <div class="center reveal">
+    <span class="section-label">Últimos artículos</span>
+    <h2 class="section-title">Blog de <span style="color:var(--cyan)">Tecnología</span></h2>
+    <p class="section-sub">Insights, tutoriales y tendencias del mundo tech.</p>
+  </div>
+
+  <div class="blog-grid">
+
+    <article class="blog-card reveal reveal-delay-1">
+      <div class="blog-img-wrap">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600" alt="IA en 2025" loading="lazy" />
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Inteligencia Artificial</span>
+        <h3><a href="#">Las 10 Tendencias de IA que Dominarán el 2025</a></h3>
+        <div class="blog-meta">
+          <span class="blog-author">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40" style="width:24px;height:24px;border-radius:50%;object-fit:cover;" alt="" />
+            Nexus Team
+          </span>
+          <span class="blog-likes" title="Me gusta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="like-count">248</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog-card reveal reveal-delay-2">
+      <div class="blog-img-wrap">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600" alt="Desarrollo web" loading="lazy" />
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Desarrollo Web</span>
+        <h3><a href="#">Por Qué Tu Empresa Necesita una API en 2025</a></h3>
+        <div class="blog-meta">
+          <span class="blog-author">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40" style="width:24px;height:24px;border-radius:50%;object-fit:cover;" alt="" />
+            Nexus Team
+          </span>
+          <span class="blog-likes" title="Me gusta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="like-count">173</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog-card reveal reveal-delay-3">
+      <div class="blog-img-wrap">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="SEO Marketing" loading="lazy" />
+      </div>
+      <div class="blog-body">
+        <span class="blog-tag">Marketing Digital</span>
+        <h3><a href="#">Cómo el SEO con IA Multiplica Tu Tráfico Orgánico</a></h3>
+        <div class="blog-meta">
+          <span class="blog-author">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40" style="width:24px;height:24px;border-radius:50%;object-fit:cover;" alt="" />
+            Nexus Team
+          </span>
+          <span class="blog-likes" title="Me gusta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="like-count">319</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section id="contact">
+  <div class="center reveal">
+    <span class="section-label">Contáctanos</span>
+    <h2 class="section-title">Inicia tu <span style="color:var(--cyan)">Proyecto</span> Hoy</h2>
+    <p class="section-sub">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <h3>Hablemos de tu proyecto</h3>
+      <p>Estamos listos para ayudarte a construir soluciones tecnológicas que transformen tu negocio.</p>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <strong>Ubicación</strong>
+          <span>Colombia — Remoto global</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div class="contact-item-text">
+          <strong>Email</strong>
+          <span>hola@nexustech.co</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🕐</div>
+        <div class="contact-item-text">
+          <strong>Tiempo de respuesta</strong>
+          <span>Menos de 24 horas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card reveal reveal-delay-2">
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombres">NOMBRES *</label>
+            <input type="text" id="nombres" name="nombres" placeholder="JUAN PABLO" autocomplete="given-name" required />
+            <span class="error-msg">Este campo es requerido.</span>
+          </div>
+          <div class="form-group">
+            <label for="apellidos">APELLIDOS *</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="RODRÍGUEZ MORA" autocomplete="family-name" required />
+            <span class="error-msg">Este campo es requerido.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="correo">CORREO ELECTRÓNICO *</label>
+          <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" autocomplete="email" required />
+          <span class="error-msg">Ingresa un correo válido con @.</span>
+        </div>
+        <div class="form-group">
+          <label for="telefono">TELÉFONO * (Llave única)</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="3112241803" autocomplete="tel" required />
+          <span class="error-msg">Solo números, 7-15 dígitos.</span>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">MENSAJE (opcional)</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">ENVIAR MENSAJE</button>
+        <p class="form-msg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" style="margin-bottom:12px;display:inline-flex;">
+        <div class="logo-icon">N</div>
+        <span class="logo-text">NEXUS TECH</span>
+      </a>
+      <p>Empresa de tecnología dedicada a proyectos, marketing digital e IA. Transformamos ideas en soluciones digitales de vanguardia.</p>
+      <br/>
+      <div class="social-links">
+        <a class="social-link" href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+        <a class="social-link" href="#" title="Twitter/X" aria-label="Twitter">𝕏</a>
+        <a class="social-link" href="#" title="Instagram" aria-label="Instagram">ig</a>
+        <a class="social-link" href="#" title="YouTube" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces Rápidos</h4>
+      <a href="#hero">Inicio</a>
+      <a href="#services">Servicios</a>
+      <a href="#about">Quién soy</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contacto</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Políticas de privacidad</a>
+      <a href="#">Términos de servicio</a>
+      <a href="#">Soporte técnico</a>
+      <a href="#">Cookies</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px;line-height:1.6;">Recibe las últimas tendencias tech directamente en tu correo.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="tu@correo.com" aria-label="Email newsletter" />
+        <button type="submit" aria-label="Suscribirse">→</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Nexus Tech. Todos los derechos reservados. | hola@nexustech.co</p>
+    <div class="footer-legal">
+      <a href="#">Privacidad</a>
+      <a href="#">Términos</a>
+      <a href="#">Soporte</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT (número oculto en data attribute) -->
+<a class="whatsapp-float"
+   data-wa="3112241803"
+   href="#"
+   id="wa-btn"
+   aria-label="Contáctanos por WhatsApp"
+   title="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script src="script.js"></script>
+<script>
+  // WhatsApp link built from data attribute (number not visible in href)
+  const waBtn = document.getElementById('wa-btn');
+  if (waBtn) {
+    const num = waBtn.getAttribute('data-wa');
+    waBtn.href = 'https://wa.me/' + num;
+    waBtn.target = '_blank';
+    waBtn.rel = 'noopener noreferrer';
+  }
+</script>
+</body>
+</html>
