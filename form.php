@@ -110,14 +110,15 @@ try {
 // ——— Insertar registro ———
 try {
     $insert = $pdo->prepare('
-    INSERT INTO clientes_web (nombres, apellidos, correo, telefono)
-    VALUES (:nombres, :apellidos, :correo, :telefono)
+    INSERT INTO clientes_web (nombres, apellidos, correo, telefono, mensaje)
+    VALUES (:nombres, :apellidos, :correo, :telefono, :mensaje)
 ');
     $insert->execute([
         ':nombres'   => $nombres,
         ':apellidos' => $apellidos,
         ':correo'    => $correo,
         ':telefono'  => $telefono,
+        ':mensaje'   => $mensaje,
     ]);
     http_response_code(200);
     echo json_encode(['success' => true, 'message' => 'Registro exitoso.']);
