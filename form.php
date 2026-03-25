@@ -118,7 +118,7 @@ try {
         ':apellidos' => $apellidos,
         ':correo'    => $correo,
         ':telefono'  => $telefono,
-        ':mensaje'   => $mensaje,
+        ':mensaje'   => $body['mensaje'] ?? '
     ]);
     http_response_code(200);
     echo json_encode(['success' => true, 'message' => 'Registro exitoso.']);
