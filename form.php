@@ -94,7 +94,6 @@ try {
 
 // ——— Verificar duplicado por teléfono (llave única) ———
 try {
-    //$stmt = $pdo->prepare('SELECT id FROM "Clientes_web" WHERE "Telefono" = :telefono LIMIT 1');
     $stmt = $pdo->prepare('SELECT id FROM clientes_web WHERE telefono = :telefono LIMIT 1');
     $stmt->execute([':telefono' => $telefono]);
     if ($stmt->fetch()) {
