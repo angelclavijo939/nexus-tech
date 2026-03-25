@@ -221,7 +221,7 @@ document.querySelectorAll('.count-up').forEach(el => counterObserver.observe(el)
         telefono:  (form.querySelector('[name="telefono"]')?.value  || '').trim().replace(/\D/g, ''),
         mensaje:   (form.querySelector('[name="mensaje"]')?.value   || '').trim(),
       };
-      const res = await fetch('form.php', {
+      const res = await fetch('/api/form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
