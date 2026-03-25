@@ -94,7 +94,8 @@ try {
 
 // ——— Verificar duplicado por teléfono (llave única) ———
 try {
-    $stmt = $pdo->prepare('SELECT id FROM "Clientes_web" WHERE "Telefono" = :telefono LIMIT 1');
+    //$stmt = $pdo->prepare('SELECT id FROM "Clientes_web" WHERE "Telefono" = :telefono LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id FROM clientes_web WHERE telefono = :telefono LIMIT 1');
     $stmt->execute([':telefono' => $telefono]);
     if ($stmt->fetch()) {
         http_response_code(409);
@@ -110,9 +111,9 @@ try {
 // ——— Insertar registro ———
 try {
     $insert = $pdo->prepare('
-        INSERT INTO "Clientes_web" ("Nombres", "Apellidos", "Correo", "Telefono")
-        VALUES (:nombres, :apellidos, :correo, :telefono)
-    ');
+    INSERT INTO clientes_web (nombres, apellidos, correo, telefono)
+    VALUES (:nombres, :apellidos, :correo, :telefono)
+');
     $insert->execute([
         ':nombres'   => $nombres,
         ':apellidos' => $apellidos,
