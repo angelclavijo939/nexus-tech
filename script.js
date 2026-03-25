@@ -219,7 +219,7 @@ document.querySelectorAll('.count-up').forEach(el => counterObserver.observe(el)
         apellidos: (form.querySelector('[name="apellidos"]')?.value || '').trim().toUpperCase(),
         correo:    (form.querySelector('[name="correo"]')?.value    || '').trim().toLowerCase(),
         telefono:  (form.querySelector('[name="telefono"]')?.value  || '').trim().replace(/\D/g, ''),
-        mensaje:   (form.querySelector('[name="mensaje"]')?.value   || '').trim(),
+        
       };
       const res = await fetch('/api/form', {
         method: 'POST',
