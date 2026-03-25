@@ -111,7 +111,7 @@ try {
 try {
     $insert = $pdo->prepare('
         INSERT INTO "Clientes_web" ("Nombres", "Apellidos", "Correo", "Telefono")
-        VALUES (nextval('"Clientes_web_Id_seq"'::regclass),  :nombres, :apellidos, :correo, :telefono)
+        VALUES (:nombres, :apellidos, :correo, :telefono)
     ');
     $insert->execute([
         ':nombres'   => $nombres,
