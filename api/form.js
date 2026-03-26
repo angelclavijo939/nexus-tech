@@ -83,9 +83,9 @@ module.exports = async function handler(req, res) {
 
     // Insertar
     await client.query(
-      `INSERT INTO clientes_web (nombres, apellidos, correo, telefono)
-       VALUES ($1, $2, $3, $4)`,
-      [nombres, apellidos, correo, telefono]
+      `INSERT INTO clientes_web (nombres, apellidos, correo, telefono, mensaje)
+       VALUES ($1, $2, $3, $4, $5)`,
+      [nombres, apellidos, correo, telefono, body.mensaje || '']
     );
 
     return json(res, 200, { success: true, message: 'Registro exitoso.' });
