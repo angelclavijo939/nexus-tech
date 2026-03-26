@@ -12,11 +12,11 @@ const { Pool } = require('pg');
 
 // Pool de conexión reutilizable entre invocaciones (Vercel lo cachea)
 const pool = new Pool({
-  host:     process.env.PGHOST,
-  port:     parseInt(process.env.PGPORT || '5432'),
-  database: process.env.DB_NAME || process.env.PGDATABASE,
-  user:     process.env.PGUSER,
-  password: process.env.PGPASSWORD,
+  host:     process.env.maindb_web_PGHOST || process.env.PGHOST,
+  port:     parseInt(process.env.maindb_web_PGPORT || process.env.PGPORT || '5432'),
+  database: process.env.DB_NAME || process.env.maindb_web_PGDATABASE || process.env.PGDATABASE,
+  user:     process.env.maindb_web_PGUSER || process.env.PGUSER,
+  password: process.env.maindb_web_PGPASSWORD || process.env.PGPASSWORD,
   ssl:      { rejectUnauthorized: false }, // requerido por Neon
   max:      1,                             // serverless: 1 conexión por función
   idleTimeoutMillis: 10000,
@@ -74,7 +74,7 @@ module.exports = async function handler(req, res) {
 
     // Verificar duplicado por teléfono (llave única)
     const check = await client.query(
-      'SELECT id FROM "Clientes_web" WHERE "Telefono" = $1 LIMIT 1',
+      'SELECT id FROM clientes_web WHERE telefono = $1 LIMIT 1',
       [telefono]
     );
     if (check.rowCount > 0) {
@@ -83,7 +83,7 @@ module.exports = async function handler(req, res) {
 
     // Insertar
     await client.query(
-      `INSERT INTO "Clientes_web" ("Nombres", "Apellidos", "Correo", "Telefono")
+      `INSERT INTO clientes_web (nombres, apellidos, correo, telefono)
        VALUES ($1, $2, $3, $4)`,
       [nombres, apellidos, correo, telefono]
     );
@@ -101,4 +101,3 @@ module.exports = async function handler(req, res) {
     if (client) client.release();
   }
 };
-
